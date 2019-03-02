@@ -38,9 +38,9 @@ for (x in 1:number_of_files){
     print(typeof(dataset))
     print('first dataset loaded')
     print(print(Sys.time()))
-    
+
   }
-  
+
   # if the merged dataset does exist, append to it
   else {
     temp_dataset <-read.csv(paste(paste(download_base,x,sep = ""),".txt",sep = ""), header=TRUE, sep=",")
@@ -123,5 +123,5 @@ combined$income_rounded <- round(combined$avg_income/1000)
 #Create age rounded column for cleaner analysis
 combined$age_rounded <- round(combined$age)
 
-#Final output is visualized here:
+#Final output is visualized here in Tableau via Tableau Public desktop client:
 #https://public.tableau.com/profile/divya.parmar#!/vizhome/OhioVoterBreakout/Crosstable?publish=yes
